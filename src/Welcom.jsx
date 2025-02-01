@@ -7,7 +7,7 @@ function Welcom(){
         <>
           <Footer />
           <div className="dumbdiv">
-            <img className="fComputer" src=".\resources\it-admin-troubleshooting.gif" alt="Computer"></img>
+            <img className="fComputer" src="\resources\it-admin-troubleshooting.gif" alt="Computer"></img>
             <p>--- Feel Free to look around</p>
           </div>
           <p>--- Welcome to the web ---</p>
