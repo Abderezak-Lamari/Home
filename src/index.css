@@ -1,0 +1,495 @@
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(0, 0, 0);
+  font-family: monospace;
+}
+
+h2 {
+  margin-left: 1vw;
+}
+
+p {
+  margin-left: 1vw;
+}
+
+.container {
+  display: flex;
+  margin-top: 0;
+  padding-top: 1vw;
+}
+
+.fComputer {
+  border-style: double;
+  width: 5vw;
+  height: auto;
+  margin-left: 1vw;
+}
+
+.right {
+  border-style: double;
+  width: 52.5%;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.left {
+  width: 45%;
+  margin-right: 1vw;
+}
+
+.bar {
+  border-style: double;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dumbdiv {
+  display: flex;
+  align-items: center;
+}
+
+.secondi {
+  margin-left: 1vw;
+  height: 15vw;
+  width: auto;
+  border-style: double;
+}
+
+.dumbdiv2 {
+  display: flex;
+}
+
+.nimg {
+  width: 5vw;
+  height: auto;
+  margin-left: 1vw;
+}
+
+.void {
+  width: 100%;
+  height: 100%;
+}
+
+.igal {
+  margin: 5px;
+  max-height: 20vw;
+  max-width: 200vw;
+  text-align: center;
+}
+
+/* Width */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000; /* Color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff; /* Color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0000; /* Color of the scrollbar handle on hover */
+}
+
+.tab {
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-family: monospace;
+}
+
+.CenterTxt {
+  text-align: center;
+}
+
+.tab{
+  border: none;
+  border-right: double;
+}
+
+.Onepr {
+  border-style: double;
+
+  display: flex;
+}
+
+.PrPic {
+  width: auto;
+  height: 80px;
+  text-align: right;
+  flex: 1;
+}
+
+.PrText {
+  margin-top: auto;
+  margin-bottom: auto;
+  flex: 1;
+}
+
+.gray-on-hover:hover {
+  background-color: #fc0000; /* Change to the shade of gray you prefer */
+  font-size: large;
+  transition: background-color 0s ease; /* Smooth transition effect */
+}
+
+.txthover:hover {
+  background-color: #fc0000
+}
+
+.onhoverImg:hover {
+  filter: brightness(120%);
+}
+
+.notselect {
+  user-select: none;
+}
+
+.righttxt {
+  text-align: right;
+}
+
+.blog {
+  display: flex;
+  margin: auto;
+}
+
+.Middle {
+  text-align: center;
+}
+
+.alink {   
+  text-align: center;   
+  color: white;   
+  text-decoration: none;  /* Removes the underline or dashed line */
+}
+
+/* visited link */
+.alink:visited {   
+  color: white; 
+}
+
+/* mouse over link */
+.alink:hover {   
+  color: red; 
+}
+
+/* selected link */
+.alink:active {   
+  color: black; 
+}
+
+.Header {
+  display: flex;           /* Enable Flexbox */
+  justify-content: space-between; /* Places elements on opposite sides */
+  align-items: center;
+  font-size: 3vw;
+  width: 100%;
+  height: 3vw;
+  min-height: 30px;
+  margin-left: 0vw;
+  margin-top: 0vw;
+  margin-bottom: 0;
+  border-style: double;
+}
+
+.font {
+  font-family: monospace;
+  font-weight: normal;
+  font-size: calc(40% + 10px);
+  padding-left: 10px;
+}
+
+.Musicbox {
+  border-left: double;
+  width: 40%;
+  height: 100%;
+  margin-left: auto;
+}
+
+.controls {
+  height: 100%;
+  position: relative;
+}
+
+.Player {
+  position: absolute;
+  font-size: calc(10% + 7px);
+  width: 25%;
+  top: 10%; /* distance from the top of the container */
+  left: 10%;
+  background: none;
+  color: rgb(255, 255, 255);
+  border-style: none;
+}
+
+.Player:nth-child(2) {
+  left: 37.5%; /* position second button */
+}
+
+.Player:nth-child(3) {
+  left: 65%; /* position third button */
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+}
+
+.ProgressBar {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: #ffffff;
+  border-style: double;
+  width: 80%;
+  height: 20%;
+  margin-left: 10%;
+  top: 50%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 2px #A6A6A6;
+  border: 2px solid #ffffff;
+  height: 0.5vw;
+  width: 5%;
+  border-radius: 0px;
+  background: #000000;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+@media (max-width: 685px) {
+  .tab {
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+  }
+}
+
+@media (max-width: 1040px) {
+  .ProgressBar {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: #ffffff;
+    border-style: none;
+    width: 80%;
+    height: 15%;
+    margin-left: 10%;
+    margin-top: 4%;
+    top: 50%;
+  }
+}
+
+body {
+  background-image: url('/resources/Back.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+  position: relative; /* Ensure stacking context for child elements */
+  z-index: 0; /* Ensure it's at a lower z-index than the video */
+}
+
+.background-video {
+  position: fixed; /* Fixes the video relative to the viewport */
+  z-index: -2; /* Sends the video to the back */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Ensures the video covers the entire container without distortion */
+  pointer-events: none; /* Prevents interactions with the video */
+  transition: opacity 1s ease-in-out;
+}
+
+.background-video.fade-out {
+  opacity: 0;
+}
+
+.textForm {
+  width: 95%;
+}
+
+.ShowImage{
+  object-fit: contain;
+  width: auto;
+  height: 90%;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.ShowVideo{
+  border: double;
+  width: 100%;
+  height: 85vh;
+}
+
+@media (max-width: 760px) {
+  /* Styles for screens less than 760px wide */
+  .container{
+    flex-direction: column;
+    width: 100vw;
+  }
+  .left{
+    width: 100%;
+  }
+  .Header{
+    width:92vw;
+  }
+  .Musicbox{
+    width: 150px;
+  }
+  .right{
+    width: 100%
+;  }
+}
+
+@media (max-width: 1080px) {
+  /* Styles for screens less than 760px wide */
+  .container{
+    flex-direction: column;
+    width: 100vw;
+  }
+  .left{
+    width: 98%;
+    height: 380px;
+  }
+  .ShowImage{
+    object-fit: contain;
+    width: auto;
+    height: 90%;
+    width: 100%;
+    margin-top: 5px;
+  }
+  .Header{
+    width: 100%;
+    height: 50px;
+  }
+  .font{
+    font-size: 23px;
+    margin-left: 5px;
+    padding-left: 5px;
+  }
+  .Musicbox{
+    width: 150px;
+    margin-left: 0;
+  }
+  .Player{
+    font-size: 10px;
+    padding-top: 5px;
+  }
+  .right{
+    margin-top: 30px;
+    width: 98%;
+    height: 500px;
+  }
+  .CenterTxt{
+    font-size: 8px;
+  }
+  .bar{
+    height: 30px;
+  }
+  .tab{
+    font-size: 10px;
+    padding: 0 10px;
+  }
+  .hello{
+    margin-top: 30px;
+  }
+  .ProgressBar {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: #ffffff;
+    border-style: double;
+    width: 80%;
+    height: 15%;
+    margin-left: 10%;
+    top: 50%;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 2px #A6A6A6;
+    border: 1px solid #ffffff;
+    height: 2vw;
+    width: 2vw;
+    border-radius: 0px;
+    background: #000000;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  h2{
+    font-size: 15px;
+  }
+  p{
+    font-size: 10px;
+  }
+  li{
+    font-size: 10px;
+  }
+  .textForm{
+    font-size: 10px;
+  }
+  .secondi{
+    width: 120px;
+    height: 120px;
+  }
+  .PrPic {
+    width: auto;
+    height: 65px;
+  }
+  .marginbottom{
+    margin-bottom: 0px;
+  }
+  .tab{
+    border: none;
+    border-right: double;
+  }
+  body {
+    background-image: url('/resources/Back.gif');
+    background-size: cover; /* Adjusts image to cover the viewport */
+    background-position: center top; /* Starts at the top and adjusts with scroll */
+    background-repeat: repeat; /* Tiles the image if needed */
+    background-attachment: scroll; /* Moves the image with scrolling */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    height: auto;
+    width: 100vw; /* Ensures the body grows with content */
+  }
+  .background-video {
+    position: fixed; /* Fixes the video relative to the viewport */
+    z-index: -2; /* Sends the video to the back */
+    top: 0;
+    left: 0;
+    width: 101vw; /* Full viewport width */
+    height: 101.5vh; /* Full viewport height */
+    object-fit: cover; /* Ensures the video covers the entire container without distortion */
+    pointer-events: none; /* Prevents interactions with the video */
+    transition: opacity 1s ease-in-out;
+  }
+  .void{
+    width: 100%;
+  }
+  .igal{
+    width: 47%;
+    max-height: none;
+    height: 180px;
+    object-fit: cover;
+  }
+
+}
