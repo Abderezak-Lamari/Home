@@ -10,7 +10,7 @@ function Welcom(){
             <img className="fComputer" src="resources\it-admin-troubleshooting.gif" alt="Computer"></img>
             <p>--- Feel Free to look around</p>
           </div>
-          <p>--- Welcome to the web ---</p>
+          <p>--- Welcome ---</p>
           <div className="dumbdiv">
             <div className="dumbdiv2">
               <img className="secondi" src="resources\M72a.gif" alt="M72a"></img>

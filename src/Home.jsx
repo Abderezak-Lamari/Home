@@ -13,9 +13,9 @@ function Home(){
             <p class="CenterTxt">Instagram</p>
             <a href="https://www.instagram.com/abderezak.lm/" target="_blank" className="alink"><p className="CenterTxt">https://www.instagram.com/abderezak.lm/</p></a>
             <p class="CenterTxt">Twitter</p>
-            <a href="url" target="_blank" className="alink"><p className="CenterTxt">link text</p></a>
+            <p className="CenterTxt">link text</p>
             <p class="CenterTxt">Discord</p>
-            <a href="url" target="_blank" className="alink"><p className="CenterTxt">abderezak.lamari</p></a>
+            <p className="CenterTxt">abderezak.lamari</p>
             <h2 class="CenterTxt">----- Misc -----</h2>
             <p class="CenterTxt">My Anime List</p>
             <a href="https://myanimelist.net/profile/AbderezakLM" target="_blank" className="alink"><p className="CenterTxt">https://myanimelist.net/profile/AbderezakLM</p></a>

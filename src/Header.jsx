@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 
 function Welcome() {
   const tracks = [
-    { id: 1, name: "Song 1", src: "/music/1.mp3" },
-    { id: 2, name: "Song 2", src: "/music/2.mp3" },
-    { id: 3, name: "Song 3", src: "/music/3.mp3" },
-    { id: 4, name: "Song 4", src: "/music/4.mp3" },
-    { id: 5, name: "Song 5", src: "/music/5.mp3" },
-    { id: 6, name: "Song 6", src: "/music/6.mp3" },
-    { id: 7, name: "Song 7", src: "/music/7.mp3" },
+    { id: 1, name: "Song 1", src: "music/1.mp3" },
+    { id: 2, name: "Song 2", src: "music/2.mp3" },
+    { id: 3, name: "Song 3", src: "music/3.mp3" },
+    { id: 4, name: "Song 4", src: "music/4.mp3" },
+    { id: 5, name: "Song 5", src: "music/5.mp3" },
+    { id: 6, name: "Song 6", src: "music/6.mp3" },
+    { id: 7, name: "Song 7", src: "music/7.mp3" },
   ];
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -33,13 +33,27 @@ function Welcome() {
   };
 
   const nextTrack = () => {
-    const nextIndex = (currentTrackIndex + 1) % tracks.length;
-    setCurrentTrackIndex(nextIndex);
+    setCurrentTrackIndex(prevIndex => {
+      const nextIndex = prevIndex + 1;
+      return nextIndex < tracks.length ? nextIndex : prevIndex; // Make sure it doesn't go out of bounds
+    });
+    console.log(currentTrackIndex); // This may still log the old state because of state update timing
+    togglePlayPause();
+    setTimeout(() => {
+      setIsPlaying(isPlaying)
+    }, 100)
   };
-
+  
   const previousTrack = () => {
-    const prevIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
-    setCurrentTrackIndex(prevIndex);
+    setCurrentTrackIndex(prevIndex => {
+      const prevIndexValue = prevIndex - 1;
+      return prevIndexValue >= 0 ? prevIndexValue : prevIndex; // Prevent going below 0
+    });
+    console.log(currentTrackIndex);
+    togglePlayPause();
+    setTimeout(() => {
+      setIsPlaying(isPlaying)
+    }, 100)
   };
 
   const updateProgress = () => {
@@ -49,39 +63,46 @@ function Welcome() {
       const currentProgress = (currentTime / duration) * 100;
       setProgress(currentProgress);
     }
+    console.log(currentTime);
+    console.log(currentTrackIndex);
 
-    if (currentTrackIndex === 3 && currentTime.toFixed(1) === "267.2") {
-      setShowVideo(true);
-      setShowVideo2(false);
-      setVideoFadeOut(false);
-
-      const videoDuration = 29000;
-      setTimeout(() => {
-        setShowVideo(false);
-        setVideoFadeOut(false);
-      }, videoDuration);
-    }
-
-    if (currentTrackIndex === 4 && currentTime.toFixed(1) === "1.0") {
-      setShowVideo(false);
-      setShowVideo2(true);
-      setVideoFadeOut(false);
-
-      const videoDuration = 46000;
-      setTimeout(() => {
+    if (currentTrackIndex === 3) {
+      if (Math.abs(currentTime - 121) < 1) {
+        console.log("aaaaaaaaaaaaaaa");
+        setShowVideo(true);
         setShowVideo2(false);
         setVideoFadeOut(false);
-      }, videoDuration);
+
+        const videoDuration = 29000;
+        setTimeout(() => {
+          setShowVideo(false);
+          setVideoFadeOut(false);
+        }, videoDuration);
+      }
+    }
+
+    if (currentTrackIndex === 4) {
+      if (Math.abs(currentTime - 2) < 1) {
+        setShowVideo(false);
+        setShowVideo2(true);
+        setVideoFadeOut(false);
+
+        const videoDuration = 46000;
+        setTimeout(() => {
+          setShowVideo2(false);
+          setVideoFadeOut(false);
+        }, videoDuration);
+      }
     }
   };
 
   useEffect(() => {
     const audio = audioRef.current;
-    audio.src = tracks[currentTrackIndex].src;
+    audio.src = tracks[currentTrackIndex].src; // Make sure to use the updated `currentTrackIndex`
     if (isPlaying) {
       audio.play();
     }
-  }, [currentTrackIndex, isPlaying]);
+  }, [currentTrackIndex, isPlaying])
 
   useEffect(() => {
     if (isPlaying) {

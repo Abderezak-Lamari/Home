@@ -7,7 +7,6 @@ const VideoShitpost = ({ setSelectedClip, Source }) => {
   name = name.replace(".mp4", "");
 
     const ShowClip = () => {
-        console.log("000000000")
         setSelectedClip(Source);
     }
 
